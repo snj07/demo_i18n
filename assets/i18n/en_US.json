@@ -1,0 +1,13 @@
+{
+  "app_name": "",
+  "login_page": {
+    "button": {
+      "login": "Login",
+      "light_theme" : "Light Theme",
+      "dark_theme" : "Dark Theme",
+      "hindi_language" : "Hindi Language",
+      "english_language" : "English Language",
+      "cancel": "Cancel"
+    }
+  }
+}

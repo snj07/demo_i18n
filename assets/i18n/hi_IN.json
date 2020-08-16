@@ -1,0 +1,13 @@
+{
+  "app_name": "",
+  "login_page": {
+    "button": {
+      "login": "प्रवेश करें",
+      "light_theme" : "लाइट थीम",
+      "dark_theme" : "डार्क थीम",
+      "hindi_language" : "हिन्दी भाषा",
+      "english_language" : "अंग्रेजी भाषा",
+      "cancel": "रद्द करें"
+    }
+  }
+}

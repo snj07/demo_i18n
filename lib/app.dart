@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_i18n/flutter_i18n.dart';
-import 'package:flutter_i18n/flutter_i18n_delegate.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
 import './configs/global_app_config.dart';
 import './configs/global_app_constants.dart';
 import './constants/constants.dart';
 import './models/app_locale_model.dart';
 import './screens/login/login.dart';
 import './theme/app_theme.dart';
-
 import 'blocs/blocs.dart';
 
 class MyApp extends StatelessWidget {
@@ -25,11 +23,7 @@ class MyApp extends StatelessWidget {
         appTheme = state.appTheme;
         appLocaleModel = state.appLocaleModel;
       }
-//      var flutterI18nDelegate = FlutterI18nDelegate(
-//          useCountryCode: true,
-//          fallbackFile: 'en_US',
-//          path: GlobalAppConstants.i18Path);
-//      await flutterI18nDelegate.load(locale)
+
       return MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
@@ -44,19 +38,6 @@ class MyApp extends StatelessWidget {
         //howPerformanceOverlay: true,
         theme:
             appTheme == AppTheme.LIGHT ? buildLightTheme() : buildDarkTheme(),
-//        theme: ThemeData(
-//          primarySwatch: Colors.blue,
-//          visualDensity: VisualDensity.adaptivePlatformDensity,
-//        ),
-//        darkTheme: ThemeData(
-//          brightness: Brightness.dark,
-//          /* dark theme settings */
-//        ),
-//        themeMode: ThemeMode.light,
-        /* ThemeMode.system to follow system theme,
-           ThemeMode.light for light theme,
-           ThemeMode.dark for dark theme
-        */
         home: MyHomePage(title: 'Flutter Demo Home Page'),
       );
     });

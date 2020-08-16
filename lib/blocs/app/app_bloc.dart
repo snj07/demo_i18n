@@ -70,6 +70,7 @@ class AppBloc extends Bloc<AppEvent, AppState> {
         .isSupported(Locale(event.appLocaleModel.languageCode,
             event.appLocaleModel.countryCode))
         .toString());
+    SpUtil.putObject(GlobalKeys.currentLocaleKey, event.appLocaleModel);
     await GlobalAppConfig.flutterI18nDelegate.load(Locale(
         event.appLocaleModel.languageCode, event.appLocaleModel.countryCode));
 
